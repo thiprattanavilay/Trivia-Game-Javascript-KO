@@ -3,7 +3,7 @@ var json = {
     showProgressBar: "bottom",
     firstPageIsStarted: true,
     startSurveyText: "START GAME",
-    
+
     pages: [
         {
             questions: [
@@ -63,7 +63,7 @@ var json = {
                     correctAnswer: "Program the behavior of web pages"
                 }
             ]
-        }, 
+        },
           {
             questions: [
                 {
@@ -144,7 +144,7 @@ var json = {
         },
     ],
     completedHtml: "<h4>WOW! You've answered correctly <b>{correctedAnswers}</b> questions out of <b>{questionCount}</b>.</h4>"
-    
+
 };
 
 // This function reloads the
@@ -161,8 +161,8 @@ survey
     .add(function (result) {
         document
             .querySelector("#surveyResult")
-            .textContent = "Answers:\n" + JSON.stringify(result.data, null, 3);
-            
+            .innerHTML = "Answers:\n" + JSON.stringify(result.data, null, 3);
+
 
     });
 
