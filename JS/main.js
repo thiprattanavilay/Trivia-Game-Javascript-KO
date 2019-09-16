@@ -16,7 +16,7 @@ var json = {
             questions: [
                 {
                     type: "radiogroup",
-                    name: "Matrix",
+                    name: "The Matrix",
                     title: "When Neo experiences déjà vu in The Matrix, what animal does he see twice?",
                     choices: [
                         "A mouse", "A cat", "A dog", "A tiger",
@@ -41,7 +41,7 @@ var json = {
             questions: [
                 {
                     type: "radiogroup",
-                    name: "Club",
+                    name: "Fight Club",
                     title: "What is the narrator’s power animal in Fight Club?",
                     choicesOrder: "random",
                     choices: [
@@ -55,7 +55,7 @@ var json = {
             questions: [
                 {
                     type: "radiogroup",
-                    name: "Jerry",
+                    name: "Jerry Maguire",
                     title: "According to the cute little kid in Jerry Maguire, how much does the human head weigh?",
                     choices: [
                         "6 pounds", "8 pounds", "10 pounds", "12 pounds",
@@ -68,7 +68,7 @@ var json = {
             questions: [
                 {
                     type: "radiogroup",
-                    name: "Romy",
+                    name: "Romy and Michele's",
                     title: "In Romy and Michele’s High School Reunion, what did Sandy Frink invent that made him a billionaire?",
                     choices: [
                         "Post-it notes", "Pogs", "A rubber for shoes",
@@ -160,8 +160,9 @@ survey
     .onComplete
     .add(function (result) {
         document
-            .querySelector()
-            .innerHTML = "result: " + JSON.stringify(result.data);
+            .querySelector("#surveyResult")
+            .textContent = "Answers:\n" + JSON.stringify(result.data, null, 3);
+            
 
     });
 
